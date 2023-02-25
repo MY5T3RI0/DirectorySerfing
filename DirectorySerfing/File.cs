@@ -11,9 +11,16 @@ namespace DirectorySerfing
     [Table("Files")]
     public class File
     {
-        [Key]
+        public int FileId { get; set; }
+        public DateTime CopyDate { get; set; }
         public string Name { get; set; }
         public string Extention { get; set; }
+        public string BaseDir { get; set; }
         public long Size { get; set; }
+        public DateTime CreationDate { get; set; }
+        public DateTime LastChange { get; set; }
+        public int Hash { get; set; }
+        public ICollection<Directory> Directory { get; set; }
+
     }
 }

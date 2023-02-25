@@ -11,5 +11,6 @@ namespace DirectorySerfing
     {
         public FileContext() : base("DbConnection") { }
         public DbSet<File> Files { get; set; }
+        public DbSet<Directory> Directories { get; set; }
     }
 }
